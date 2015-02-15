@@ -1,0 +1,60 @@
+@import url(animate.css);
+@import url(bootstrap.css);
+@import url(font-awesome.min.css);
+@import url(http://fonts.googleapis.com/css?family=Open+Sans);
+@import url(http://fonts.googleapis.com/css?family=Muli);
+@import url(http://fonts.googleapis.com/css?family=Pacifico);
+@import url(metro-bootstrap.min.css);
+
+.jumbotron
+{
+  height: 100%;
+  margin-bottom: 0;
+  background: url(../img/bg.jpg);
+  background-size: 100% 100%;
+  background-attachment: fixed;
+}
+
+.img
+{
+  height: 50%
+}
+
+.about h1
+{
+  font-size: 42px
+}
+
+.about
+{
+  padding-top: 40px;
+  background: url(../img/city.jpg);
+  background-size: 100%;
+  color: #fff;
+  background: #A52;
+  padding-bottom: 40px
+}
+
+.logo
+{
+  height: 300px
+}
+
+.whoweare
+{
+
+  color: #fff;
+  background: purple;
+  padding-top: 40px;
+  padding-bottom: 40px
+}
+
+.about a
+{
+  color: #FFF
+}
+
+.whoweare h1
+{
+  font-size: 42px
+}

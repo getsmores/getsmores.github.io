@@ -1,0 +1,119 @@
+<html>
+	<head>
+		<script type="text/javascript" src="js/jQuery.min.js"></script>
+		<script type="text/javascript" src="js/bootstrap.min.js"></script>
+		<script type="text/javascript" src="js/WOW.js"></script>
+		<script type="text/javascript">new WOW().init();</script>
+		<link rel="stylesheet" type="text/css" href="css/style.css">
+		<title>Smores</title>
+		<script>
+			$(function() {
+	  			$('a[href*=#]:not([href=#])').click(function() {
+					if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname)
+					{
+						var target = $(this.hash);
+      					target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
+      					if (target.length) {
+        					$('html,body').animate({
+          						scrollTop: target.offset().top
+        					}, 1000);
+        					return false;
+      					}
+					}
+    				this.toggleClass("active");
+  				});
+			});				
+		</script>
+	</head>
+	<body>
+		<!-- Fixed navbar -->
+    	<nav class="navbar navbar-inverse navbar-fixed-top">
+      		<div class="container">
+        		<div class="navbar-header">
+      				<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            			<span class="sr-only">Toggle navigation</span>
+            			<span class="icon-bar"></span>
+            			<span class="icon-bar"></span>
+            			<span class="icon-bar"></span>
+          			</button>
+          			<a class="navbar-brand" href="#">Smores</a>
+        		</div>
+        		<div id="navbar" class="navbar-collapse collapse">
+          			<ul class="nav navbar-nav">
+            			<li><a href="#">Home</a></li>
+            			<li><a href="#about">About</a></li>
+            			<li><a href="#whoweare">Who we are</a></li>
+        				<li><a href="#contact">Contact</a></li>
+          			</ul>
+    			</div><!--/.nav-collapse -->
+      		</div>
+		</nav>
+		<div class="wholething">
+			<div class="jumbotron">
+				<div class="container jumbocontainer" align="center">
+					<img src="img/Smores.png" class="WOW rotateIn img">
+					<h1 class="wow fadeInUp">Smores</h1>
+					<h2 class="wow fadeIn" data-wow-delay="1s">Data <span class="wow fadeIn" data-wow-delay="1500ms">without</span><span class="wow fadeIn" data-wow-delay="2s"> internet</span></h2>
+				</div>
+			</div>
+			<div class="about" id="about">
+				<div class="container" align="center">
+					<h1 class="wow pulse">About the App</h1>
+					<h2><a href="#about" id="non" class="wow fadeIn" data-wow-delay="500ms">Non-technical terms</a> &middot; <a href="#about" id="tech" class="wow fadeIn" data-wow-delay="1s">Technical Terms</a></h2>
+					<h3 class="non wow fadeInDown">This is an Android App that will be available on the Google Play Market. It will behave a lot like currently existing apps such as Siri and Google Now, with the exception that this app does not utilize internet of any kind - Wi-Fi nor 3G/4G/LTE.</h3>
+					<h3 class="tech wow fadeInDown">This is an Android App that will be available on the Google Play Market. It will behave a lot like currently existing apps such as Siri and Google Now, with the exception that this app does not utilize internet of any kind - Wi-Fi nor 3G/4G/LTE.<br>The way this works is the app recieves the voice command and in the background sends a message to a designated number. This number is hosted by Twilio. When the Twilio server recieves the SMS, it forwards the message to my PHP code hosted on <a href="http://heroku.com">Heroku</a>. My PHP code processes the information, sends a request back to the Twilio server, and the Twilio server then sends the text back to your Android phone in response to your query. The app then intercepts the message to display the information onto your phone as Siri or Google Now would. This operates a lot like <a href="http://cosmosbrowser.org">Cosmos</a> with the exception that this isn't a browser.</h3>
+				</div>
+			</div>
+
+			<div class="whoweare" id="whoweare" align="center">
+				<div class="container">
+					<h1>Who we are</h1>
+					<div class="row">
+						<div class="col-md-6" align="right">
+							<img src="img/Logo.png" class="logo wow rotateIn" data-wow-offset="75">
+						</div>
+						<div class="col-md-6" align="left">
+							<h2 class="wow fadeInRight">Andy Kamath</h2>
+							<h3 class="wow fadeInRight">PHP kid. Primary back-end developer</h3>
+							<h2 class="wow fadeInRight" data-wow-offset="50">Devin Lynch</h2>
+							<h3 class="wow fadeInRight">Android front-end dev</h3>
+							<h2 class="wow fadeInRight" data-wow-offset="50">James Seddon</h2>
+							<h3 class="wow fadeInRight">Primary designer and marketer</h3>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="contactme" id="contact" align="center" style="background: blue;color:#fff">
+				<div class="container">
+					<h3>This site is open-sourced on <strong><a style="color:yellow" href="http://github.com/getsmores/getsmores.github.io">GitHub</a></strong> and made with <i class="fa fa-heart animated infinite pulse" style="color:red"></i> by <strong><a style="color:yellow" href="http://andykamath.com">Andy Kamath</a></strong></h3>
+				</div>
+			</div>
+		</div>
+		<script type="text/javascript">
+			$(function() {
+  				$('a[href*=#]:not([href=#])').click(function() {
+    				if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
+      					var target = $(this.hash);
+      					target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
+      					if (target.length) {
+        					$('html,body').animate({
+          						scrollTop: target.offset().top
+        					}, 1000);
+        					return false;
+      					}
+    				}
+  				});
+			});
+			$(".tech").hide();
+			$("#tech").click(function(){
+				$(".tech").show();
+				$(".non").hide();
+			});
+			$("#non").click(function(){
+				$(".tech").hide();
+				$(".non").show();
+			});
+		</script>
+	</body>
+</html>
